@@ -793,7 +793,7 @@ namespace CTML
                             options.formatting,
                             true,
                             options.indentLevel + 1,
-                            true
+                            options.escapeContent
                         ));
 
                     output << indent << "</" << m_name << ">";
@@ -1132,7 +1132,7 @@ namespace CTML
         /**
          * Get the vector of child nodes from this node instance.
          */
-        std::vector<Node> GetChildren()
+        const std::vector<Node>& GetChildren()
         {
             return m_children;
         }
